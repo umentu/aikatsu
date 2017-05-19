@@ -9,42 +9,38 @@
 <table id="data_table" class="table table-striped">
     <thead>
         <tr>
-            <th>あああ</th>
-            <th>いいい</th>
-            <th>ううう</th>
+            <th>連番</th>
+            <th>発売日</th>
+            <th>CDタイプ</th>
+            <th>CDタイトル</th>
+            <th>DISC</th>
+            <th>トラック</th>
+            <th>曲名</th>
+            <th>アーティスト</th>
+            <th>作詞者</th>
+            <th>作曲者</th>
+            <th>編曲者</th>
         </tr>
     </thead>
     <tbody>
+        {% for music in music_list %}
         <tr>
-            <td>かかか</td>
-            <td>ききき</td>
-            <td>くくく</td>
+            <td>{{ music.numbering }}</td>
+            <td>{{ music.published_date }}</td>
+            <td>{{ music.type }}</td>
+            <td>{{ music.cd_title }}</td>
+            <td>{{ music.disk }}</td>
+            <td>{{ music.track }}</td>
+            <td>{{ music.music_title }}</td>
+            <td>{{ music.artist }}</td>
+            <td>{{ music.writer }}</td>
+            <td>{{ music.composer }}</td>
+            <td>{{ music.arranger }}</td>
         </tr>
-        <tr>
-            <td>さささ</td>
-            <td>ししし</td>
-            <td>すすす</td>
-        </tr>
-        <tr>
-            <td>たたた</td>
-            <td>ちちち</td>
-            <td>つつつ</td>
-        </tr>
-        <tr>
-            <td>ななな</td>
-            <td>ににに</td>
-            <td>ぬぬぬ</td>
-        </tr>
-        <tr>
-            <td>ははは</td>
-            <td>ひひひ</td>
-            <td>ふふふ</td>
-        </tr>
-
+        {% endfor %}
     </tbody>
 </table>
 
-{{music_list}}
 {% endblock %}
 
 {% block option_css %}

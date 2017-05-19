@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="{% static 'sites/css/bootstrap.min.css' %}" />
+        <link rel="stylesheet" type="text/css" href="{% static 'sites/css/bootstrap-theme.min.css' %}" />
+        <link rel="stylesheet" type="text/css" href="{% static 'sites/css/style.css' %}" />
+        <link rel="stylesheet" type="text/css" href="{% static 'sites/css/jquery.dataTables.min.css' %}" />
+        <script type="text/javascript" src="{% static 'sites/js/jquery-3.2.1.min.js' %}"></script>
+        <script type="text/javascript" src="{% static 'sites/js/bootstrap.min.js' %}"></script>
+        <script type="text/javascript" src="{% static 'sites/js/jquery.dataTables.min.js' %}"></script>
+
+        <title>{% block head_title %}{% endblock %}</title>
+        {% block option_css %}{% endblock %}
+    </head>
+    <body>
+        {% include 'sites/navbar.html' %}
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>{% block title %}{% endblock %}</h1>
+                    {% block contents %}{% endblock %}
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript">
+            {% block option_js %}{% endblock %}
+        </script>
+    </body>
+</html>

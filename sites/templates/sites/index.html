@@ -1,0 +1,55 @@
+{% extends 'sites/base.html' %}
+
+{% block head_title %}トップページ{% endblock %}
+
+{% block title %}トップページ{% endblock %}
+
+
+{% block contents %}
+<table id="data_table" class="table table-striped">
+    <thead>
+        <tr>
+            <th>あああ</th>
+            <th>いいい</th>
+            <th>ううう</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>かかか</td>
+            <td>ききき</td>
+            <td>くくく</td>
+        </tr>
+        <tr>
+            <td>さささ</td>
+            <td>ししし</td>
+            <td>すすす</td>
+        </tr>
+        <tr>
+            <td>たたた</td>
+            <td>ちちち</td>
+            <td>つつつ</td>
+        </tr>
+        <tr>
+            <td>ななな</td>
+            <td>ににに</td>
+            <td>ぬぬぬ</td>
+        </tr>
+        <tr>
+            <td>ははは</td>
+            <td>ひひひ</td>
+            <td>ふふふ</td>
+        </tr>
+
+    </tbody>
+</table>
+{% endblock %}
+
+{% block option_css %}
+{% endblock %}
+
+{% block option_js %}
+$(function(){
+    $('#data_table').DataTable();
+});
+{% endblock %}
